@@ -17,6 +17,20 @@ ol, ul {
   list-style: none;
 }
 
+.form form {
+  width: 280px;
+  margin: 20% auto;
+  display: flex;
+  flex-direction: column;
+}
+.form form .date-time {
+  display: flex;
+  justify-content: space-;
+}
+.form form .date-time input[type=number] {
+  width: 40px;
+}
+
 body {
   background: green;
 }

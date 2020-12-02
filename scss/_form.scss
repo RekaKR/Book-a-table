@@ -1,0 +1,18 @@
+.form {
+
+  form {
+    width: 280px;
+    margin: 20% auto;
+    display: flex;
+    flex-direction: column;
+
+    .date-time {
+      display: flex;
+      justify-content: space-;
+
+      input[type=number] {
+        width: 40px;
+      }
+    }
+  }
+}
