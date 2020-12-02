@@ -22,12 +22,17 @@
 
     <main class="form">
       <form action="">
-        <input type="text" name="name" id="name" required>
-        <input type="email" name="email" id="email" required>
+        <input type="text" name="name" id="name" placeholder="Full name" required>
+        <input type="email" name="email" id="email" placeholder="Email" required>
         <div class="date-time">
           <input type="date" name="date" id="date" required>
           <input type="time" name="time" id="time" required>
-          <input type="number" name="number-p" id="number-p" required>
+        </div>
+        <div class="seats">
+          <label for="seats">Seats</label>
+          <input type="number" name="seats" id="seats" value="1" required>
+          <label for="table">Table</label>
+          <input type="number" name="table" id="table" value="1" required>
         </div>
       </form>
       <button class="book-btn-big">Book a table</button>
