@@ -32,9 +32,10 @@ ol, ul {
 }
 
 body {
-  background: green;
+  background: #eee;
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
+  color: #000;
 }
 
 button {
@@ -42,10 +43,6 @@ button {
   height: 60px;
 }
 
-.container {
-  max-width: 1600px;
-  margin: 0 auto;
-}
 .container header {
   width: 100%;
   height: 100vh;
@@ -59,41 +56,49 @@ button {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding-top: 10px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 6.5rem 1fr 6.5rem;
 }
 .container header nav {
   width: 3rem;
   height: 3rem;
   background-color: white;
-  margin: auto 10px auto auto;
+  margin: 0.625rem 0.625rem auto auto;
+  grid-row: 1/span 1;
+  grid-column: 1/span 1;
 }
 .container header .h1-container {
+  margin: auto 0;
+  grid-row: 2/span 1;
+  grid-column: 1/span 1;
   background-color: rgba(255, 255, 255, 0.5);
-  background-color: rgba(0, 0, 0, 0.5);
 }
 .container header .h1-container h1 {
   font-size: 3rem;
+  width: 262px;
   color: black;
-  color: #efefef;
-  padding: 0 100%;
+  padding: 5px 0;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
   text-align: center;
   letter-spacing: 3px;
-  /*      margin: calc(50vh - 10px - 3rem) auto;  */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 0 auto;
 }
-.container header div {
-  margin-top: 500px;
+.container header .button-container {
   display: flex;
+  align-items: center;
   justify-content: space-evenly;
+  grid-row: 3/span 1;
+  grid-column: 1/span 1;
 }
-.container header div button {
+.container header .button-container button {
   width: 120px;
   height: 60px;
+}
+.container main {
+  max-width: 1400px;
+  margin: 0 auto;
 }
 .container main .introduction {
   background-color: blanchedalmond;
@@ -103,15 +108,44 @@ button {
   border: 2px solid black;
 }
 .container main .menu {
-  width: 280px;
-  height: 600px;
+  background: beige;
   margin: 0 auto;
   border: 2px solid black;
-  display: flex;
-  flex-direction: column;
+}
+.container main .menu h2 {
+  text-align: center;
+  font-size: 2rem;
+  border-bottom: 1px solid black;
+  margin: 0 2rem 0.5rem;
+  padding: 0.5rem 0;
+}
+.container main .menu ul {
+  padding: 1rem;
+  max-width: 360px;
+  margin: 0 auto;
+}
+@media (min-width: 720px) {
+  .container main .menu ul {
+    max-width: 720px;
+    column-count: 2;
+  }
+  .container main .menu ul li {
+    max-width: 360px;
+  }
+}
+.container main .menu ul li {
+  margin-bottom: 1rem;
+}
+.container main .menu ul li p.toppings {
+  color: #222;
+  font-size: 0.9rem;
+  text-align: justify;
+  padding: 0.2rem 0 0.3rem 0;
 }
 .container main .book-btn-big {
-  margin: 3.125rem 0;
+  margin: 3.125rem auto;
+  display: block;
+  width: 200px;
 }
 .container footer {
   width: 100%;
