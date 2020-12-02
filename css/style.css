@@ -34,6 +34,7 @@ ol, ul {
 body {
   background: green;
   font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 
 button {
@@ -48,11 +49,16 @@ button {
 .container header {
   width: 100%;
   height: 100vh;
-  background-image: url("https://images.pexels.com/photos/3052364/pexels-photo-3052364.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  background-color: red;
+  /*background-image:  linear-gradient(
+    rgba(255, 255, 255, 0.5),
+    rgba(200, 200, 200, 0.5)
+  ),
+  url("../img/background.jpeg");*/
+  background-image: url("../img/background.jpeg");
+  background-color: black;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 45.5% 10%;
+  background-position: center;
   padding-top: 10px;
 }
 .container header nav {
@@ -61,11 +67,19 @@ button {
   background-color: white;
   margin: auto 10px auto auto;
 }
-.container header h1 {
-  max-width: 262px;
-  font-size: 2em;
-  color: red;
+.container header .h1-container {
+  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.container header .h1-container h1 {
+  font-size: 3rem;
+  color: black;
+  color: #efefef;
+  padding: 0 100%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
   text-align: center;
+  letter-spacing: 3px;
   /*      margin: calc(50vh - 10px - 3rem) auto;  */
   position: absolute;
   top: 50%;
@@ -83,8 +97,8 @@ button {
 }
 .container main .introduction {
   background-color: blanchedalmond;
-  margin: 3.125em 0;
-  padding: 1em;
+  margin: 3.125rem 0;
+  padding: 1rem;
   text-align: justify;
   border: 2px solid black;
 }
@@ -97,15 +111,15 @@ button {
   flex-direction: column;
 }
 .container main .book-btn-big {
-  margin: 3.125em 0;
+  margin: 3.125rem 0;
 }
 .container footer {
   width: 100%;
   height: 50px;
   background-color: burlywood;
   display: grid;
-  grid-template-columns: 0.2fr 0.8fr 0.8fr 0.2fr;
-  grid-template-rows: repeat(2, 1fr);
+  grid-tremplate-columns: 0.2fr 0.8fr 0.8fr 0.2fr;
+  grid-tremplate-rows: repeat(2, 1fr);
 }
 .container footer .contact {
   margin: auto;
