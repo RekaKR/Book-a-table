@@ -60,9 +60,11 @@
   }
 }
 
-.form {
+main.form {
   padding-top: 100px;
-  
+  min-height: 100vh;
+  padding-bottom: 6.875rem;
+
   @media (min-width: 720px) {
     padding-top: 150px;
   }
@@ -131,4 +133,8 @@
   .svg-visible {
     display: block;
   }
+}
+
+footer.form {
+  margin-top: -6.875rem;
 }
