@@ -79,12 +79,4 @@ window.onload = function () {
       click.innerHTML = "See the tables";
     };
   }
-
-  // hamburgermenu js
-  let nav = document.querySelector('nav');
-  let navUl = nav.querySelector('ul');
-
-  nav.addEventListener('click', () => {
-    navUl.classList.toggle('opened');
-  });
 }
