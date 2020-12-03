@@ -11,23 +11,11 @@
   top: 0;
   left: 0;
   
-  nav {
-    width: 3rem;
-    height: 3rem;
-    background: white;
-    border-radius: 50%;
-    margin: 0.625rem 0.625rem auto auto;
-    grid-row: 1 / span 1;
-    grid-column: 1 / span 1;
+  .nav-container {
+      grid-row: 1 / span 1;
+      grid-column: 1 / span 1;
   }
-}
 
-/*  
-  nav {
-    margin: 0.625rem 0.625rem auto auto;
-    grid-row: 1 / span 1;
-  }
-  */
   .a-header {
     color: variables.$bodyTextColor;
     text-decoration: none;
@@ -47,7 +35,7 @@
     letter-spacing: 3px;
     grid-row: 2 / span 1;
   }
-
+}
 
 .form {
   padding-top: 150px;
