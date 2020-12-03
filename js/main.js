@@ -2,7 +2,7 @@ window.onload = function () {
   //----------------------basic setup--------------------
   const donne = document.querySelector(".book-button-big");
   donne.classList.add("invalid");
-  
+
   //-----------------Name validation-----------------
   let userName = document.getElementById("name");
   //triggers when the form input loses focus 
@@ -12,9 +12,9 @@ window.onload = function () {
     let fail = true;
     let valName = String(userName.value);
     //print the if statments
-/*     console.log(/\d/.test(valName));
-    console.log(!(valName.includes(" ")));
-    console.log(valName.length < 5); */
+    /*     console.log(/\d/.test(valName));
+        console.log(!(valName.includes(" ")));
+        console.log(valName.length < 5); */
     //if, that checks the validity
     if ((/\d/.test(valName)) == true || !(valName.includes(" ")) || (valName.length < 5)) {
       fail = false;
@@ -52,6 +52,7 @@ window.onload = function () {
       //console.log("Invalid e-mail cím");
     }
     console.log("Valid az e-mail cím? " + valid);
+    return (valid);
   }
 
   //---------------------date--------------------//
@@ -80,9 +81,9 @@ window.onload = function () {
   //  console.log(typeof actualDate);
   reservDate.setAttribute("min", actualDate);
 
-  let dateRange = String(year + "-" + month + "-" + (dayN+20));
+  let dateRange = String(year + "-" + month + "-" + (dayN + 20));
   reservDate.setAttribute("max", dateRange);
-  
+
   //------------------ setting time --------------//
   let reservTime = document.getElementById("time");
   //  console.log(reservTime);
@@ -100,20 +101,24 @@ window.onload = function () {
 
   reservTime.setAttribute("min", avilableTime);
 
-  
-  donne.addEventListener("mouseenter", logRes);
 
-  function logRes () {
-    let x = validName;
-    let y = emailIsValid;
-    if ((x = true) && (y = true)) {
-    donne.classList.remove("invalid");
-    console.log
-    console.log ("Order");
-    console.log(userName.value);
-    console.log(userEmail.value);
-    console.log(reservDate.value +" "+ reservTime.value);
-  }
+  document.querySelector("form").addEventListener("change", logRes);
+
+  function logRes() {
+    let x = validName();
+    console.log(x);
+    let y = emailIsValid();
+    console.log(y);
+    console.log(reservDate.value.length);
+    console.log(reservTime.value.length);
+    if ((x === true) && (y === true) && (reservDate.value.length > 0) && (reservTime.value.length > 0)) {
+      donne.classList.remove("invalid");
+      console.log
+      console.log("Order");
+      console.log(userName.value);
+      console.log(userEmail.value);
+      console.log(reservDate.value + " " + reservTime.value);
+    }
   }
 
 
