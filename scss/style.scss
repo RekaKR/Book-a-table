@@ -140,21 +140,26 @@ body {
       }
 
       ul {
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
+        max-width: 360px;
         margin: 0 auto;
-        padding: 1rem 0;
+        padding: 1rem;
+        
+        @media (min-width: 720px) {
+          max-width: 720px;
+          column-count: 2;
+
+          li {
+            max-width: 360px;
+          }
+        }
         
         li {
           display: flex;
-          justify-content: space-evenly;
+          justify-content: space-between;
           margin-bottom: 1rem;
-          width: 100%;
-          max-width: 22.5rem;
 
           .image-container {
-            width: 5.25rem;
+            width: 6.25rem;
 
             img {
               width: 100%;
@@ -228,6 +233,14 @@ body {
       p {
         font-size: 0.7rem;
       }
+    }
+  }
+
+  .footer {
+    @media (min-width: 1600px) {
+      grid-template-columns: 0.5fr 1fr 0.5fr 1fr;
+      grid-template-rows: 2fr 1fr;
+      position: fixed;
     }
   }
 }

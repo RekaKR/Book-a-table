@@ -402,5 +402,12 @@ body {
 .container footer .copyright p {
   font-size: 0.7rem;
 }
+@media (min-width: 1600px) {
+  .container .footer {
+    grid-template-columns: 0.5fr 1fr 0.5fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    position: fixed;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
