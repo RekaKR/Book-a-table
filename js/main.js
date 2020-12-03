@@ -1,19 +1,7 @@
 window.onload = function () {
   //----------------------basic setup--------------------
   const donne = document.querySelector(".book-button-big");
-  donne.style.backgroundColor = "#fff3f2";
-  
-  .invalid {
-    background-color: "#fff3f2";
-    cursor: none;
-    box-shadow: none;
-  }
-
-  .invalid:hover {
-    box-shadow: none;
-    opacity: 0;
-  }
-  
+  donne.classList.add("invalid");
   
   //-----------------Name validation-----------------
   let userName = document.getElementById("name");

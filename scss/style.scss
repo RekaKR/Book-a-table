@@ -44,6 +44,18 @@ body {
     box-shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.2);
     opacity: 0.9;
   }
+
+  &.invalid {
+    box-shadow: none;
+    background-color: #fa867e;
+    cursor: not-allowed;
+
+    &:hover {
+      box-shadow: none;
+      opacity: 1;
+    } 
+
+  }
 }
 
 .menu-button {
