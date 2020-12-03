@@ -21,6 +21,44 @@ a {
   font-weight: normal;
 }
 
+/*.header-form {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}*/
+.header-form {
+  width: 100%;
+  height: 100px;
+  background-color: orange;
+}
+.header-form nav {
+  width: 3rem;
+  height: 3rem;
+  background-color: white;
+  margin: 0.625rem 0.625rem auto auto;
+  grid-row: 1/span 1;
+  grid-column: 1/span 1;
+}
+.header-form .h1-container {
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: auto 0;
+  grid-row: 2/span 1;
+  grid-column: 1/span 1;
+}
+.header-form .h1-container h1 {
+  width: 262px;
+  color: black;
+  margin: 0 auto;
+  padding: 5px 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 3rem;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
 .form form {
   width: 280px;
   margin: 20% auto;
@@ -101,7 +139,7 @@ body {
   display: block;
 }
 
-.container header {
+.container .header-index {
   width: 100%;
   height: 100vh;
   background-image: url("../img/background.jpeg");
@@ -113,7 +151,7 @@ body {
   grid-template-columns: 100%;
   grid-template-rows: 6.5rem 1fr 6.5rem;
 }
-.container header nav {
+.container .header-index nav {
   width: 3rem;
   height: 3rem;
   background-color: white;
@@ -121,13 +159,13 @@ body {
   grid-row: 1/span 1;
   grid-column: 1/span 1;
 }
-.container header .h1-container {
+.container .header-index .h1-container {
   background-color: rgba(255, 255, 255, 0.5);
   margin: auto 0;
   grid-row: 2/span 1;
   grid-column: 1/span 1;
 }
-.container header .h1-container h1 {
+.container .header-index .h1-container h1 {
   width: 262px;
   color: black;
   margin: 0 auto;
@@ -138,7 +176,7 @@ body {
   text-align: center;
   letter-spacing: 3px;
 }
-.container header .button-container {
+.container .header-index .button-container {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -157,14 +195,14 @@ body {
   border-bottom: 1px solid black;
 }
 .container main .introduction {
-  background-color: #d9a447;
+  background-color: #fefefe;
   margin: 3.125rem auto;
-  padding: 1rem;
+  padding: 0 1rem 1rem;
   text-align: justify;
   border: 2px solid black;
 }
 .container main .menu {
-  background: #d9a447;
+  background: #fefefe;
   margin: 0 auto;
   border: 2px solid black;
 }
@@ -194,7 +232,7 @@ body {
 .container footer {
   width: 100%;
   height: 110px;
-  background-color: #d9a447;
+  background-color: #fefefe;
   display: grid;
   grid-template-columns: 0.2fr 0.8fr 0.8fr 0.2fr;
   grid-template-rows: 2fr 1fr;
