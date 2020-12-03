@@ -8,6 +8,11 @@ window.onload = function () {
     cursor: none;
     box-shadow: none;
   }
+
+  .invalid:hover {
+    box-shadow: none;
+    opacity: 0;
+  }
   
   
   //-----------------Name validation-----------------
