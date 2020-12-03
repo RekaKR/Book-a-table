@@ -159,7 +159,7 @@ nav ul li a.button {
 .form form .wrong {
   height: 1.5rem;
   color: red;
-  margin: -5% 0 0;
+  margin: 3px 0 -3px;
   font-size: 0.5rem;
   text-align: center;
 }
