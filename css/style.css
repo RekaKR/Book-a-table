@@ -28,7 +28,7 @@ a {
   background-color: #e9ecf3;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 6.5rem 1fr 6.5rem;
+  grid-template-rows: 1fr 1fr;
   position: fixed;
   top: 0;
   left: 0;
