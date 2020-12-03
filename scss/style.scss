@@ -22,7 +22,7 @@ body {
   background: $backgroundColor;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
-  color: #000;
+  color: $bodyTextColor;
 }
 
 .button {
@@ -64,7 +64,7 @@ body {
     width: 100%;
     height: 100vh;
     background-image: url("../img/background.jpeg");
-    background-color: black;
+    background-color: $backgroundColor;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -116,7 +116,7 @@ body {
     margin: 0 auto;
 
     .introduction {
-      background-color: blanchedalmond;
+      background-color: $backgroundColorBox;
       margin: 3.125rem 0;
       padding: 1rem;
       text-align: justify;
@@ -124,7 +124,7 @@ body {
     }
 
     .menu {
-      background: beige;
+      background: $backgroundColorBox;
       margin: 0 auto;
       border: 2px solid black;
 
@@ -159,11 +159,11 @@ body {
         
         li {
           margin-bottom: 1rem;
-
-          h3 {
+/*
+        h3 {
             // font-weight: ;
           }
-
+*/
           p.toppings {
             color: #222;
             font-size: 0.9rem;
@@ -177,22 +177,32 @@ body {
 
   footer {
     width: 100%;
-    height: 50px;
-    background-color: burlywood;
+    height: 110px;
+    background-color: $backgroundColorBox;
     display: grid;
     grid-template-columns: 0.2fr 0.8fr 0.8fr 0.2fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 2fr 1fr;
 
     .contact {
-      margin: auto;
-      text-align: center;
+      margin: 5% 0;
+      text-align: justify;
       grid-row: 1 / span 1;
       grid-column: 2 / span 1;
     }
 
     .social {
-      margin: auto;
-      text-align: center;
+      margin: 0 auto;
+      font-size: 0.8rem;
+      text-align: justify;
+
+      p {
+        display: inline-block;
+      }
+    }
+
+    .information {
+      margin: 5% 10%;
+      text-align: justify;
       grid-row: 1 / span 1;
       grid-column: 3 / span 1;
     }
@@ -202,6 +212,10 @@ body {
       text-align: center;
       grid-row: 2 / span 1;
       grid-column: 1 / span 4;
+
+      p {
+        font-size: 0.7rem;
+      }
     }
   }
 }
