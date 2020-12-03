@@ -19,24 +19,24 @@ html {
 }
 
 body {
+  color: $bodyTextColor;
   background: $backgroundColor;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
-  color: $bodyTextColor;
 }
 
 .button {
+  color: #fff;
   background: #d50000;
+  padding: 0 2rem;
+  font-size: 1.2rem;
+  line-height: 3.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
   border: 0.125rem solid #d50000;
   border-radius: 0.3125rem;
   box-shadow: 0 0 0.5rem 0.125rem rgba(0, 0, 0, 0.2);
-  color: #fff;
   display: inline-block;
-  font-size: 1.2rem;
-  line-height: 3.5rem;
-  padding: 0 2rem;
-  text-decoration: none;
-  text-transform: uppercase;
   cursor: pointer;
 
   &:hover {
@@ -54,9 +54,9 @@ body {
 }
 
 .book-button-big {
+  width: 12.5rem;
   margin: 3.125rem auto;
   display: block;
-  width: 12.5rem;
 }
 
 .container {
@@ -82,25 +82,23 @@ body {
     }
 
     .h1-container {
+      background-color: rgba(255, 255, 255, 0.5);
       margin: auto 0;
       grid-row: 2 / span 1;
       grid-column: 1 / span 1;
-      background-color: rgba(255, 255, 255, 0.5);
       
       h1 {
-        font-size: 3rem;
         width: 262px;
         color: black;
+        margin: 0 auto;
         padding: 5px 0;
         font-family: 'Roboto', sans-serif;
         font-weight: 900;
+        font-size: 3rem;
         text-align: center;
         letter-spacing: 3px;
-        margin: 0 auto;
-        // text-transform: uppercase;
       }
     }
-    
    
     .button-container {
       display: flex;
@@ -115,9 +113,17 @@ body {
     max-width: 1400px;
     margin: 0 auto;
 
+    h2 {
+      margin: 0 2rem 0.5rem;
+      padding: 0.5rem 0;
+      font-size: 2rem;
+      text-align: center;
+      border-bottom: 1px solid black;
+    }
+
     .introduction {
       background-color: $backgroundColorBox;
-      margin: 3.125rem 0;
+      margin: 3.125rem auto;
       padding: 1rem;
       text-align: justify;
       border: 2px solid black;
@@ -128,42 +134,23 @@ body {
       margin: 0 auto;
       border: 2px solid black;
 
-      h2 {
-        text-align: center;
-        font-size: 2rem;
-        border-bottom: 1px solid black;
-        margin: 0 2rem 0.5rem;
-        // margin-bottom: ;
-        padding: 0.5rem 0;
-        // text-transform: ;
-      }
-
       ul {
-        padding: 1rem;
         max-width: 360px;
         margin: 0 auto;
+        padding: 1rem;
         
         @media (min-width: 720px) {
-          // display: flex;
           max-width: 720px;
-
-          // flex-wrap: wrap;
-          // justify-content: space-evenly;
           column-count: 2;
 
           li {
             max-width: 360px;
-            // flex-basis: 50%;
           }
         }
         
         li {
           margin-bottom: 1rem;
-/*
-        h3 {
-            // font-weight: ;
-          }
-*/
+
           p.toppings {
             color: #222;
             font-size: 0.9rem;
