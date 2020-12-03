@@ -8,13 +8,32 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
   <script src="./js/main.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      let nav = document.querySelector('nav');
+      let navUl = nav.querySelector('ul');
+
+      nav.addEventListener('click', () => {
+        navUl.classList.toggle('opened');
+      });
+    });
+  </script>
 </head>
 
 <body>
   <div class="container">
-    <header>
-      <nav>
-        <!--hamburger-menu-->
+    <header class="header-index">
+      <nav class="hamburger-menu">
+        <svg class="hamburger" viewBox="0 0 48 48">
+          <rect class="hamburger-a" x="9" y="12" width="30" height="3"/>
+          <rect class="hamburger-b" x="9" y="22" width="30" height="3"/>
+          <rect class="hamburger-c" x="9" y="32" width="30" height="3"/>
+        </svg>
+        <ul>
+          <li><a class="button menu-button" href="index.html">Home</a></li>
+          <li><a class="button menu-button" href="index.html#menu">Menu</a></li>
+          <li><a class="button menu-button" href="form.html">Book a table</a></li>
+        </ul>
       </nav>
       <div class="h1-container">
         <h1>Don Matteo's</h1>
@@ -41,7 +60,7 @@
         <ul>
           <li>
             <h3>Pizza 1</h3>
-            <p class="toppings">(topping1, topping1, topping1, topping1, topping1)</p>
+            <p class="toppings">topping1, topping1, topping1, topping1, topping1</p>
             <p class="price">2000 Ft</p>
           </li>
           <li>
