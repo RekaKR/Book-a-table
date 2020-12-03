@@ -1,5 +1,11 @@
 @use 'variables';
 
+.con-form {
+  @media (min-width: 720px) {
+    min-height: calc(100vh + 150px);
+  }
+}
+
 .header-form {
   width: 100%;
   height: 6.25rem;
@@ -33,7 +39,7 @@
     text-transform: uppercase;
 
 
-    @media (min-width: 620px) {
+    @media (min-width: 720px) {
       display: block;
     }
   }
@@ -56,7 +62,7 @@
 
 .form {
   padding-top: 100px;
-
+  
   @media (min-width: 720px) {
     padding-top: 150px;
   }
