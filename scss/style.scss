@@ -47,7 +47,6 @@ body {
 
   &.invalid {
     box-shadow: none;
-    background-color: #fa867e;
     cursor: not-allowed;
 
     &:hover {
@@ -274,7 +273,6 @@ body {
     @media (min-width: 1600px) {
       grid-template-columns: 0.5fr 1fr 0.5fr 1fr;
       grid-template-rows: 2fr 1fr;
-      position: fixed;
     }
   }
 }

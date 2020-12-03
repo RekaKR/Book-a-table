@@ -244,7 +244,6 @@ body {
 }
 .button.invalid {
   box-shadow: none;
-  background-color: #fa867e;
   cursor: not-allowed;
 }
 .button.invalid:hover {
@@ -432,7 +431,6 @@ body {
   .container .footer {
     grid-template-columns: 0.5fr 1fr 0.5fr 1fr;
     grid-template-rows: 2fr 1fr;
-    position: fixed;
   }
 }
 
