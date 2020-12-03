@@ -107,7 +107,7 @@ window.onload = function () {
     let x = validName;
     let y = emailIsValid;
     if ((x = true) && (y = true)) {
-    //gomb változik
+    donne.classList.remove("invalid");
     console.log
     console.log ("Order");
     console.log(userName.value);
