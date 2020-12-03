@@ -37,7 +37,7 @@ window.onload = function () {
       console.log("Valid e-mail cím");
       if (wOn) {
         document.querySelector(".wrong").remove();
-
+        userEmail.classList.remove("noBotMarg");
         wOn = false;
       }
     } else {
@@ -45,14 +45,10 @@ window.onload = function () {
         userEmail.insertAdjacentHTML('afterend', '<p class="wrong"></p>');
         document.querySelector(".wrong").innerHTML = "Wrong e-mail format";
         wOn = true;
+        userEmail.classList.add("noBotMarg");
       }
       console.log("Invalid e-mail cím");
     }
-
-    //    if (!valid && userEmail.value.length > 1) {
-    //    } else {
-    //    }
-
   }
 
 
@@ -115,3 +111,4 @@ window.onload = function () {
     };
   }
 }
+
