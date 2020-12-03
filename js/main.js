@@ -1,24 +1,33 @@
 window.onload = function () {
-
+  //----------------------basic setup--------------------
+  const donne = document.querySelector(".book-button-big");
+  donne.style.backgroundColor = "#fff3f2";
+  
+  .invalid {
+    background-color: "#fff3f2";
+    cursor: none;
+    box-shadow: none;
+  }
+  
+  
+  //-----------------Name validation-----------------
   let userName = document.getElementById("name");
-
   //triggers when the form input loses focus 
   userName.addEventListener("blur", validName);
 
   function validName() {
-    let fail = false;
+    let fail = true;
     let valName = String(userName.value);
     //print the if statments
-    console.log(/\d/.test(valName));
+/*     console.log(/\d/.test(valName));
     console.log(!(valName.includes(" ")));
-    console.log(valName.length < 5);
+    console.log(valName.length < 5); */
     //if, that checks the validity
     if ((/\d/.test(valName)) == true || !(valName.includes(" ")) || (valName.length < 5)) {
-      fail = true;
-      console.log("Hiba az if-ben " + fail);
+      fail = false;
     }
     //lets see the result+return
-    console.log("Hibás a név? " + fail);
+    console.log("Valid a név? " + fail);
     return (fail);
   }
 
@@ -34,7 +43,7 @@ window.onload = function () {
 
     if (/\S+@\S+\.\S+/.test(userEmail.value) && userEmail.value.length > 7) {
       valid = true;
-      console.log("Valid e-mail cím");
+      //console.log("Valid e-mail cím");
       if (wOn) {
         document.querySelector(".wrong").remove();
         userEmail.classList.remove("noBotMarg");
@@ -47,11 +56,10 @@ window.onload = function () {
         wOn = true;
         userEmail.classList.add("noBotMarg");
       }
-      console.log("Invalid e-mail cím");
+      //console.log("Invalid e-mail cím");
     }
+    console.log("Valid az e-mail cím? " + valid);
   }
-
-
 
   //---------------------date--------------------//
   let reservDate = document.getElementById("date");
@@ -70,19 +78,22 @@ window.onload = function () {
   let day = d.getDate();
   //  console.log(day);
   //  console.log(typeof day);
+  let dayN = day;
 
   if (day <= 9) { day = String("0" + day); }
 
   let actualDate = String(year + "-" + month + "-" + day);
   //  console.log(actualDate);
   //  console.log(typeof actualDate);
-
   reservDate.setAttribute("min", actualDate);
 
+  let dateRange = String(year + "-" + month + "-" + (dayN+20));
+  reservDate.setAttribute("max", dateRange);
+  
+  //------------------ setting time --------------//
   let reservTime = document.getElementById("time");
   //  console.log(reservTime);
 
-  //------------------ setting time --------------//
   let hour = d.getHours() + 1;
   //  console.log(hour);
   //  console.log(typeof hour);
@@ -92,13 +103,29 @@ window.onload = function () {
   //  console.log(minute);
   //  console.log(typeof minute);
 
-
   let avilableTime = String(hour + ":" + minute);
 
   reservTime.setAttribute("min", avilableTime);
 
+  
+  donne.addEventListener("mouseenter", logRes);
 
-  // tables svg change
+  function logRes () {
+    let x = validName;
+    let y = emailIsValid;
+    if ((x = true) && (y = true)) {
+    //gomb változik
+    console.log
+    console.log ("Order");
+    console.log(userName.value);
+    console.log(userEmail.value);
+    console.log(reservDate.value +" "+ reservTime.value);
+  }
+  }
+
+
+  // tables svg change------------------------------
+  //------------------------------------------------
   let click = document.getElementById("click")
   let svg = document.getElementById("svg8")
 
@@ -110,5 +137,7 @@ window.onload = function () {
       click.innerHTML = "See the tables";
     };
   }
+
+
 }
 
