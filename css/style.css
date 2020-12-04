@@ -84,12 +84,6 @@ nav ul li a.button {
   }
 }
 
-@media (min-width: 720px) {
-  .con-form {
-    min-height: calc(100vh + 150px);
-  }
-}
-
 .header-form {
   width: 100%;
   height: 6.25rem;
@@ -139,68 +133,74 @@ nav ul li a.button {
   grid-row: 2/span 1;
 }
 
-.form {
+main.form {
   padding-top: 100px;
+  min-height: 100vh;
+  padding-bottom: 6.875rem;
 }
 @media (min-width: 720px) {
-  .form {
+  main.form {
     padding-top: 150px;
   }
 }
-.form form {
+main.form form {
   width: 280px;
   margin: 2rem auto;
   display: flex;
   flex-direction: column;
 }
-.form form #email.noBotMarg {
+main.form form #email.noBotMarg {
   margin-bottom: 0;
 }
-.form form input {
+main.form form input {
   margin-bottom: 1.5rem;
   padding: 0.5rem;
   border-radius: 4px;
   border: 1px solid black;
 }
-.form form .wrong {
+main.form form .wrong {
   height: 1.5rem;
   color: red;
   margin: 3px 0 -3px;
   font-size: 0.5rem;
   text-align: center;
 }
-.form form .seats {
+main.form form .seats {
   margin: 0 auto;
 }
-.form form .seats label {
+main.form form .seats label {
   margin: 0 0.25rem 0 0.5rem;
   vertical-align: middle;
 }
-.form form .seats input[type=number] {
+main.form form .seats input[type=number] {
   width: 40px;
   margin: 0.3rem auto 0;
 }
-.form form .date-time {
+main.form form .date-time {
   display: flex;
   justify-content: space-between;
 }
-.form #click {
+main.form #click {
   text-align: center;
 }
 @media (min-width: 720px) {
-  .form #click {
+  main.form #click {
     margin: 0 auto;
   }
 }
-.form .svg8 {
+main.form .svg8 {
   width: 95%;
   max-width: 1200px;
   margin: 2.5em auto;
   display: none;
   box-shadow: 0 0 0.5rem 0.125rem rgba(0, 0, 0, 0.2);
 }
-.form .svg-visible {
+main.form .svg-visible {
   display: block;
+}
+
+footer.form {
+  margin-top: -6.875rem;
 }
 
 html {
